@@ -9,7 +9,7 @@ var bio = {
         "github" : "https://github.com/gevannmullins",
         "location" : "107 Botma Street, Steenberg"
     },
-    "welcomeMessage" : "Welcome to my Portfolio",
+    "welcomeMessage" : "A league of its own",
     "skills" : ['HTML','CSS','PHP'],
     "biopic" : "images/avatar1.png"
 };
@@ -17,36 +17,44 @@ var bio = {
 
 
 // display contact information
+/*
 for(var items in bio.contacts) {
+
     $("#topContacts").append(HTMLcontactGeneric.replace("%contact%", items).replace("%data%", bio.contacts[items]));
 }
-
+*/
 
 // display my name
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 $("#header").append(formattedName);
 
 // display role
+
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 $("#header").append(formattedRole);
 
 
+// welcome message
+
+ var formattedMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+ $("#header").append(formattedMsg);
+
+$("#header_container").append(HTMLheaderArrow);
+
 // bio image
+ /*
 var formattedImg = HTMLbioPic.replace("%data%", bio.biopic);
 $("#header").append(formattedImg);
-
-// welcome message
-var formattedMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-$("#header").append(formattedMsg);
-
+  */
 
 
 // display skills information
+ /*
 $("#header").append(HTMLskillsStart);
 for(var skills in bio.skills) {
     $("#header").append(HTMLskills.replace("%data%", bio.skills[skills]));
 }
-
+  */
 
 
 

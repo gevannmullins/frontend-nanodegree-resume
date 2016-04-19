@@ -70,11 +70,18 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     display by looking at the id or at what's written between the <h2> tags.
     -->
     <!--header-->
-    <div id="header" class="center-content clear-fix">
+    <div class="container">
+      <div class="row" id="header_container">
+        <div id="header" class="col-xs-12 center-content clear-fix text-center">
 
+        </div>
+      </div>
     </div>
-    <hr>
+
+
     <ul id="topContacts" class="flex-box"></ul>
+
+
 
 
     <div style="clear: both;"></div>
@@ -161,6 +168,27 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     if(document.getElementById('map') === null) {
       document.getElementById('mapDiv').style.display = 'none';
     }
+
+
+    var window_height = $(window).height();
+    $("#header_container").css({
+      "height": window_height
+    });
+    $("#header").css({
+      "top": ((window_height-$("#header").height())/2)-50
+    });
+    $(window).resize(function(){
+      var window_height = $(window).height();
+      $("#header_container").css({
+        "height": window_height
+      });
+      $("#header").css({
+        "top": ((window_height-$("#header").height())/2)-50
+      });
+
+    });
+
+
   </script>
 </body>
 </html>
