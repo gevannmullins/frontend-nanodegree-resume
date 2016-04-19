@@ -14,6 +14,14 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
+body{
+  background: url("../images/cloudy_mountain.jpg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .clear-fix {
   overflow: auto;
 }
@@ -129,7 +137,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  /*background-color: #484848;*/
 }
 
 .flex-box {

@@ -14,6 +14,14 @@ var bio = {
     "biopic" : "images/avatar1.png"
 };
 
+
+
+// display contact information
+for(var items in bio.contacts) {
+    $("#topContacts").append(HTMLcontactGeneric.replace("%contact%", items).replace("%data%", bio.contacts[items]));
+}
+
+
 // display my name
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 $("#header").append(formattedName);
@@ -22,11 +30,6 @@ $("#header").append(formattedName);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 $("#header").append(formattedRole);
 
-
-// display contact information
-for(var items in bio.contacts) {
-    $("#header").append(HTMLcontactGeneric.replace("%contact%", items).replace("%data%", bio.contacts[items]));
-}
 
 // bio image
 var formattedImg = HTMLbioPic.replace("%data%", bio.biopic);
@@ -48,8 +51,10 @@ for(var skills in bio.skills) {
 
 
 
-
 // workExperience
+
+// display title
+$("#workExperience").append(HTMLworkStart);
 
 var work = {
     "jobs" : [
@@ -58,14 +63,21 @@ var work = {
             "title" : "PHP Developer",
             "location" : "3 Woodlands Road, Woodstock",
             "dates" : "March 2016 - Present",
-            "description" : ""
+            "description" : "rdtndrf"
         },
         {
             "employer" : "DesignGuru",
             "title" : "Senior Developer",
             "location" : "unit G16, Old Castle Brewery, Woodstock",
             "dates" : "March 2016 - Present",
-            "description" : ""
+            "description" : "drtndrt"
+        },
+        {
+            "employer" : "DesignGuru",
+            "title" : "Senior Developer",
+            "location" : "unit G16, Old Castle Brewery, Woodstock",
+            "dates" : "March 2016 - Present",
+            "description" : "drndrtn"
         }
     ]
 
@@ -73,11 +85,13 @@ var work = {
 
 
 
-// display title
-$('#workExperience').append(HTMLworkStart);
-
-
-
+for(var jobs in work.jobs) {
+    $("#workExperience").append(HTMLworkEmployer.replace("%data%", work.jobs[jobs].employer));
+    $("#workExperience").append(HTMLworkTitle.replace("%data%", work.jobs[jobs].title));
+    $("#workExperience").append(HTMLworkDates.replace("%data%", work.jobs[jobs].dates));
+    $("#workExperience").append(HTMLworkLocation.replace("%data%", work.jobs[jobs].location));
+    $("#workExperience").append(HTMLworkDescription.replace("%data%", work.jobs[jobs].description));
+}
 
 
 
@@ -90,29 +104,47 @@ $('#projects').append(HTMLprojectStart);
 var projects = {
     "jobs" : [
         {
-            "employer" : "Responsive",
-            "title" : "PHP Developer",
-            "location" : "3 Woodlands Road, Woodstock",
+            "title" : "Woolworths Game App",
             "dates" : "March 2016 - Present",
-            "description" : ""
+            "description" : "tests",
+            "images" : "1"
         },
         {
-            "employer" : "Responsive",
-            "title" : "PHP Developer",
-            "location" : "3 Woodlands Road, Woodstock",
+            "title" : "Woolworths Game App",
             "dates" : "March 2016 - Present",
-            "description" : ""
+            "description" : "tests",
+            "images" : "2"
         },
         {
-            "employer" : "Responsive",
-            "title" : "PHP Developer",
-            "location" : "3 Woodlands Road, Woodstock",
+            "title" : "Woolworths Game App",
             "dates" : "March 2016 - Present",
-            "description" : ""
-        }
+            "description" : "tests",
+            "images" : "2"
+        },
+        {
+            "title" : "Woolworths Game App",
+            "dates" : "March 2016 - Present",
+            "description" : "tests",
+            "images" : "3"
+        },
+        {
+            "title" : "Woolworths Game App",
+            "dates" : "March 2016 - Present",
+            "description" : "tests",
+            "images" : "4"
+        },
     ]
 
 };
+
+
+// display title
+for(var jobs in projects.jobs) {
+    $("#projects").append(HTMLprojectTitle.replace("%data%", projects.jobs[jobs].title));
+    $("#projects").append(HTMLprojectDates.replace("%data%", projects.jobs[jobs].dates));
+    $("#projects").append(HTMLprojectDescription.replace("%data%", projects.jobs[jobs].description));
+    $("#projects").append(HTMLprojectImage.replace("%data%", projects.jobs[jobs].images));
+}
 
 
 
@@ -129,7 +161,6 @@ var education = {
             "degree": "Diploma",
             "majors": "CompSci",
             "dates" : "",
-            "url" : ""
         },
         {
             "name": "Pc Training and Business College",
@@ -137,7 +168,6 @@ var education = {
             "degree": "BA",
             "majors": ["CompSci"],
             "dates" : "",
-            "url" : ""
         }
     ],
     "onlineCouses": [
@@ -159,6 +189,16 @@ var education = {
 // display title
 $('#education').append(HTMLschoolStart);
 // display education information
+
+// display title
+for(var schools in education.schools) {
+    $("#education").append(HTMLschoolName.replace("%data%", education.schools[schools].name));
+    $("#education").append(HTMLschoolLocation.replace("%data%", education.schools[schools].location));
+    $("#education").append(HTMLschoolDegree.replace("%data%", education.schools[schools].degree));
+    $("#education").append(HTMLschoolMajor.replace("%data%", education.schools[schools].majors));
+    $("#education").append(HTMLschoolDates.replace("%data%", education.schools[schools].dates));
+}
+
 
 
 
