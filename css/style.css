@@ -1,3 +1,28 @@
+
+
+@font-face{
+  font-family: "billySky";
+  src: url("../fonts/billy-argel_beyond-sky/BEYONDSKTRIAL.ttf");
+  font-face-name: "";
+}
+@font-face{
+  font-family: "ginga";
+  src: url("../fonts/ginga/ginga.ttf");
+}
+@font-face{
+  font-family: "scriptin";
+  src: url("../fonts/scriptina/SCRIPTIN.ttf");
+}
+@font-face{
+  font-family: "trashco";
+  src: url("../fonts/trashco/trashco.ttf");
+}
+@font-face{
+  font-family: "deja-vu";
+  src: url("../fonts/vtks-deja-vu/vtks Deja Vu.ttf");
+}
+
+
 body,
 div,
 ul,
@@ -11,7 +36,7 @@ h5,
 h6 {
   padding:0;
   margin:0;
-  font-family: "Roboto", sans-serif;
+  /*font-family: "Roboto", sans-serif;*/
 }
 
 body{

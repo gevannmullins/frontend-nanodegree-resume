@@ -178,7 +178,7 @@ var education = {
             "dates" : "",
         }
     ],
-    "onlineCouses": [
+    "onlineCourses": [
         {
             "title" : "Udacity NanoDegree - Frontend Developer Course",
             "school" : "Udacity NanoDegree",
@@ -205,6 +205,15 @@ for(var schools in education.schools) {
     $("#education").append(HTMLschoolDegree.replace("%data%", education.schools[schools].degree));
     $("#education").append(HTMLschoolMajor.replace("%data%", education.schools[schools].majors));
     $("#education").append(HTMLschoolDates.replace("%data%", education.schools[schools].dates));
+}
+
+$('#education').append(HTMLonlineClasses);
+// display title
+for(var online in education.onlineCourses) {
+    $("#education").append(HTMLonlineTitle.replace("%data%", education.onlineCourses[online].title));
+    $("#education").append(HTMLonlineSchool.replace("%data%", education.onlineCourses[online].school));
+    $("#education").append(HTMLonlineDates.replace("%data%", education.onlineCourses[online].date));
+    $("#education").append(HTMLonlineURL.replace("%data%", education.onlineCourses[online].url));
 }
 
 

@@ -15,73 +15,76 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 <scripts> for JavaScript files to build interactions.
 -->
 <head>
-  <!-- This tells the browser how to read the document. -->
-  <meta charset="utf-8">
+    <!-- This tells the browser how to read the document. -->
+    <meta charset="utf-8">
 
-  <!-- Tells the browser what the title of this page should be. -->
-  <title>Resume</title>
+    <!-- Tells the browser what the title of this page should be. -->
+    <title>Resume</title>
 
-  <!-- Load the page styles. -->
-  <link href="css/style.css" rel="stylesheet">
+    <!-- Load the page styles. -->
+    <link href="css/style.css" rel="stylesheet">
 
-  <!--
-  jQuery is a common JavaScript library for reading and making changes to the
-  Document Object Model (DOM). The DOM is a tree that contains information
-  about what is actually visible on a website.
+    <!--
+    jQuery is a common JavaScript library for reading and making changes to the
+    Document Object Model (DOM). The DOM is a tree that contains information
+    about what is actually visible on a website.
 
-  While HTML is a static document, the browser converts HTML to the
-  DOM and the DOM can change. In fact, JavaScript's power comes from
-  its ability to manipulate the DOM, which is essentially a JavaScript
-  object. When JavaScript makes something interesting happen on a
-  website, it's likely the action happened because JavaScript changed
-  the DOM. jQuery is fast and easy to use, but it doesn't do anything
-  you can't accomplish with vanilla (regular) JavaScript.
+    While HTML is a static document, the browser converts HTML to the
+    DOM and the DOM can change. In fact, JavaScript's power comes from
+    its ability to manipulate the DOM, which is essentially a JavaScript
+    object. When JavaScript makes something interesting happen on a
+    website, it's likely the action happened because JavaScript changed
+    the DOM. jQuery is fast and easy to use, but it doesn't do anything
+    you can't accomplish with vanilla (regular) JavaScript.
+    -->
+    <script src="js/jQuery.js"></script>
+
+    <!-- More on helper.js in the class -->
+    <script src="js/helper.js"></script>
+
+    <!--
+    Uncomment the <script> tag below when you're ready to add an interactive
+    Google Map to your resume!
+    -->
+    <!--
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
   -->
-  <script src="js/jQuery.js"></script>
 
-  <!-- More on helper.js in the class -->
-  <script src="js/helper.js"></script>
+    <script src="bootstrap/js/bootstrap.js" language="JavaScript"></script>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
 
-  <!--
-  Uncomment the <script> tag below when you're ready to add an interactive
-  Google Map to your resume!
-  -->
-   <!--
-   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
--->
+    <script type="text/javascript" src="slick/slick.js" ></script>
+    <link href="slick/slick.css" rel="stylesheet" type="text/css" />
+    <link href="slick/slick-theme.css" rel="stylesheet" type="text/css" />
 
-  <script src="bootstrap/js/bootstrap.js" language="JavaScript"></script>
-  <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
-
-<script type="text/javascript" src="slick/slick.js" ></script>
-  <link href="slick/slick.css" rel="stylesheet" type="text/css" />
-  <link href="slick/slick-theme.css" rel="stylesheet" type="text/css" />
-
-  <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width">
 </head>
 <body>
 
 
 
 <style>
-.slider{
-  /*display: none;*/
-    position: absolute;
-    /*left: 0px;*/
-    /*top: 0px;*/
-    width: 90%;
-    height: 70%;
-    /*background: red;*/
-    left:5%;
-    
-    top:15%;
-    
-    border: 1px solid #fff;
-}
 
-.slick-slide{
 
-}
+
+    .slider{
+        display: none;
+        position: absolute;
+        /*left: 0px;*/
+        /*top: 0px;*/
+        width: 90%;
+        height: 70%;
+        /*background: red;*/
+        left:5%;
+
+        top:15%;
+
+        border: 1px solid #fff;
+    }
+
+    .slick-slide{
+
+    }
 
 </style>
 
@@ -90,59 +93,58 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="position:absolute; left:0px; top:0px; width:100%; height:100%;">
 
-                <ul id="example-slick" class="slider">
-                    <li  rel="jKit[binding.viewport:selector=this" data-jkit="[show:onevent=viewport.true][hide:onevent=viewport.false]">
+            <ul id="example-slick" class="slider">
+                <li rel="jKit[binding.viewport:selector=this" data-jkit="[show:onevent=viewport.true][hide:onevent=viewport.false]">>
 
-    <!--WorkExperience-->
-    <div id="workExperience" class="gray">
-      <h2>Work Experience</h2>
-    </div>
-
-
-                      <div style="position: relative; left:0px; top:0px; width:100%; height:100%; background: #3399ff;">slide 1</div>
-                    </li>
-                    <li rel="jKit[binding.viewport:selector=this" data-jkit="[show:onevent=viewport.true][hide:onevent=viewport.false]">
-
-    <!--projects-->
-    <div id="projects">
-      <h2>Projects</h2>
-    </div>
+                    <!--WorkExperience-->
+                    <div id="workExperience" style="width: 100%; height:100%; background: #ffffff;">
+                        <h2>Work Experience</h2>
+                    </div>
 
 
+                </li>
+                <li rel="jKit[binding.viewport:selector=this" data-jkit="[show:onevent=viewport.true][hide:onevent=viewport.false]">>
 
-
-                      <div style="position: relative; left:0px; top:0px; width:100%; height:100%; background: #a9bd4f;">slide 1</div>
-                    </li>
-                    <li rel="jKit[binding.viewport:selector=this" data-jkit="[show:onevent=viewport.true][hide:onevent=viewport.false]">
-
-
-
-    <!--education-->
-    <div id="education" class="gray">
-      <h2>Education</h2>
-    </div>
+                    <!--projects-->
+                    <div id="projects" style="width: 100%; height:100%; background: #ffffff;">
+                        <h2>Projects</h2>
+                    </div>
 
 
 
 
 
-                      <div style="position: relative; left:0px; top:0px; width:100%; height:100%; background: #D9534F;">slide 1</div>
-                    </li>
-                    <li rel="jKit[binding.viewport:selector=this" data-jkit="[show:onevent=viewport.true][hide:onevent=viewport.false]">
+                </li>
+                <li rel="jKit[binding.viewport:selector=this" data-jkit="[show:onevent=viewport.true][hide:onevent=viewport.false]">>
 
 
 
-    <!--maps-->
-    <div id="mapDiv">
-      <h2>Where I've Lived and Worked</h2>
-    </div>
+                    <!--education-->
+                    <div id="education" style="width: 100%; height:100%; background: #ffffff;">
+                        <h2>Education</h2>
+                    </div>
 
 
 
 
-                      <div style="position: relative; left:0px; top:0px; width:100%; height:100%; background: #DDFFBB;">slide 1</div>
-                    </li>
-                </ul>
+
+
+                </li>
+                <li rel="jKit[binding.viewport:selector=this" data-jkit="[show:onevent=viewport.true][hide:onevent=viewport.false]">>
+
+
+
+                    <!--maps-->
+                    <div id="mapDiv">
+                        <h2>Where I've Lived and Worked</h2>
+                    </div>
+
+
+
+
+
+                </li>
+            </ul>
             <!-- </div> -->
 
 
@@ -150,11 +152,11 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     </div>
 </div>
 <!-- end of banner container -->
-    
 
 
 
-  <div id="main" style="position:absolute; left: 0px; top: 0px; width: 100%; height: 100%;">
+
+<div id="main" style="position:absolute; left: 0px; top: 0px; width: 100%; height: 100%;">
 
     <!--
     Everything from here to the <script> tag below is the skeleton of your
@@ -164,8 +166,8 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     -->
     <!--header-->
     <div class="container">
-      <div class="row" id="header_container">
-        <div id="header" class="col-xs-12 center-content clear-fix text-center">
+        <div class="row" id="header_container">
+            <div id="header" class="col-xs-12 center-content clear-fix text-center">
 
 
 
@@ -173,10 +175,18 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
 
 
+            </div>
         </div>
-      </div>
     </div>
+    <div class="container" style="position: absolute; bottom: 15%;">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                <span><a href="#" class="continue_tour">Click Me</a></span>
 
+            </div>
+        </div>
+
+    </div>
 
     <ul id="topContacts" class="flex-box"></ul>
 
@@ -191,32 +201,32 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
     <!--footer-->
     <div id="lets-connect" class="dark-gray">
-      <h2 class="orange center-text">Let's Connect</h2>
+        <h2 class="orange center-text">Let's Connect</h2>
         <ul id="footerContacts" class="flex-box">
-      </ul>
+        </ul>
     </div>
 
     <!--end of main-->
-  </div>
+</div>
 
-  <!--
-  The next line tells the browser where to download the JavaScript file you'll be
-  writing. In resumeBuilder.js, you'll be writing code that builds the resume
-  dynamically when this website, index.html, is opened.
-  -->
-  <script src="js/resumeBuilder.js"></script>
+<!--
+The next line tells the browser where to download the JavaScript file you'll be
+writing. In resumeBuilder.js, you'll be writing code that builds the resume
+dynamically when this website, index.html, is opened.
+-->
+<script src="js/resumeBuilder.js"></script>
 
 
-  <!--
-  These scripts are written in JavaScript. You'll be breaking them down as part of
-  a quiz. Essentially, the next few lines are checking to see if you have not
-  changed each section of the resume. If you have not made any changes to a section
-  of the resume, then that part of the resume does not show up. More on this in the
-  course.
-  -->
-  
+<!--
+These scripts are written in JavaScript. You'll be breaking them down as part of
+a quiz. Essentially, the next few lines are checking to see if you have not
+changed each section of the resume. If you have not made any changes to a section
+of the resume, then that part of the resume does not show up. More on this in the
+course.
+-->
 
-  <script type="text/javascript">
+
+<script type="text/javascript">
     // Notice how all of a sudden there's JavaScript inside this HTML
     // document? You can write JavaScript between <script> tags. At the end of your
     // JavaScript, don't forget the closing script tag with the slash (/).
@@ -227,48 +237,48 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     //   two slashes for all following characters on a single line, or
 
     /*
-        an opening and closing set of slash asterisks for block comments.
-    */
+     an opening and closing set of slash asterisks for block comments.
+     */
 
 
     if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('topContacts').style.display = 'none';
+        document.getElementById('topContacts').style.display = 'none';
     }
     if(document.getElementsByTagName('h1').length === 0) {
-      document.getElementById('header').style.display = 'none';
+        document.getElementById('header').style.display = 'none';
     }
     if(document.getElementsByClassName('work-entry').length === 0) {
-      document.getElementById('workExperience').style.display = 'none';
+        document.getElementById('workExperience').style.display = 'none';
     }
     if(document.getElementsByClassName('project-entry').length === 0) {
-      document.getElementById('projects').style.display = 'none';
+        document.getElementById('projects').style.display = 'none';
     }
     if(document.getElementsByClassName('education-entry').length === 0) {
-      document.getElementById('education').style.display = 'none';
+        document.getElementById('education').style.display = 'none';
     }
     if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('lets-connect').style.display = 'none';
+        document.getElementById('lets-connect').style.display = 'none';
     }
     if(document.getElementById('map') === null) {
-      document.getElementById('mapDiv').style.display = 'none';
+        document.getElementById('mapDiv').style.display = 'none';
     }
 
 
     var window_height = $(window).height();
     $("#header_container").css({
-      "height": window_height
+        "height": window_height
     });
     $("#header").css({
-      "top": ((window_height-$("#header").height())/2)-50
+        "top": ((window_height-$("#header").height())/2)-50
     });
     $(window).resize(function(){
-      var window_height = $(window).height();
-      $("#header_container").css({
-        "height": window_height
-      });
-      $("#header").css({
-        "top": ((window_height-$("#header").height())/2)-50
-      });
+        var window_height = $(window).height();
+        $("#header_container").css({
+            "height": window_height
+        });
+        $("#header").css({
+            "top": ((window_height-$("#header").height())/2)-50
+        });
 
 
 
@@ -276,7 +286,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     });
 
 
-  </script>
+</script>
 
 
 <script language="javascript">
@@ -291,6 +301,26 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
         });
     });
 </script>
+
+<script language="javascript">
+    $(document).ready(function(){
+        $(".continue_tour").on("click", function(){
+            $(this).fadeOut();
+            $("#header").animate({
+
+                opacity: 0.0,
+                top: "0px",
+
+            }, 1000, function(){
+//                            alert("its gone");
+                $(".slider").fadeIn(1000);
+            });
+//                        $("#header_container").fadeOut();
+
+        })
+    });
+</script>
+
 
 
 </body>
