@@ -161,10 +161,10 @@ a {
 }
 
 /* TODO: Replace with image later */
-#header {
-  /*background-color: #484848;*/
+/*#header {
+  background-color: #484848;
 }
-
+*/
 .flex-box {
   display: -webkit-flex;
   display: flex;
@@ -200,6 +200,8 @@ span {
 #lets-connect {
   text-align: center;
 }
+
+
 
 /* Media queries to handle various device widths */
 

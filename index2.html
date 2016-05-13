@@ -86,6 +86,84 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     </div>
   </div>
 
+
+<div id="main">
+
+    <!--
+    Everything from here to the <script> tag below is the skeleton of your
+    website. Your code will add information to each of the sections of the
+    resume below. You can pretty easily figure out what each section will
+    display by looking at the id or at what's written between the <h2> tags.
+    -->
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+
+                <div id="workExperience" style="width: 100%; height:100%; color: #000; background: #ffffff;">
+                    <h2>Work Experience</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+
+                <div id="projects" style="width: 100%; height:100%; background: #ffffff;">
+                    <h2>Projects</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                <div id="education" style="width: 100%; height:100%; background: #ffffff;">
+                    <h2>Education</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                <div id="mapDiv">
+                    <h2>Where I've Lived and Worked</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <ul id="topContacts" class="flex-box"></ul>
+
+
+
+
+    <div style="clear: both;"></div>
+
+
+
+
+    <!--footer-->
+    <div id="lets-connect" class="dark-gray">
+        <h2 class="orange center-text">Let's Connect</h2>
+        <ul id="footerContacts" class="flex-box">
+        </ul>
+    </div>
+
+    <!--end of main-->
+</div>
+
   <!--
   The next line tells the browser where to download the JavaScript file you'll be
   writing. In resumeBuilder.js, you'll be writing code that builds the resume
@@ -118,26 +196,108 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
 
     if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('topContacts').style.display = 'none';
+      document.getElementById('topContacts').style.display = 'flex-box';
     }
     if(document.getElementsByTagName('h1').length === 0) {
-      document.getElementById('header').style.display = 'none';
+      document.getElementById('header').style.display = 'flex-box';
     }
     if(document.getElementsByClassName('work-entry').length === 0) {
-      document.getElementById('workExperience').style.display = 'none';
+      document.getElementById('workExperience').style.display = 'flex-box';
     }
     if(document.getElementsByClassName('project-entry').length === 0) {
-      document.getElementById('projects').style.display = 'none';
+      document.getElementById('projects').style.display = 'flex-box';
     }
     if(document.getElementsByClassName('education-entry').length === 0) {
-      document.getElementById('education').style.display = 'none';
+      document.getElementById('education').style.display = 'flex-box';
     }
     if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('lets-connect').style.display = 'none';
+      document.getElementById('lets-connect').style.display = 'flex-box';
     }
     if(document.getElementById('map') === null) {
-      document.getElementById('mapDiv').style.display = 'none';
+      document.getElementById('mapDiv').style.display = 'flex-box';
     }
   </script>
+  
+
+
+<script language="JavaScript" type="text/javascript">
+
+
+    $(document).ready(function(){
+
+        var window_height = $(this).window.height();
+        alert(window_height);
+
+
+
+
+        // $(".header_window").css({
+            // "height": window_height
+        // });
+
+        $("#header").css({
+            "top": '50%'
+        });
+    // $(window).resize(function(){
+    //     var window_height = $(window).height();
+    //     $(".header_window").css({
+    //         "height": window_height
+    //     });
+    //     $(".header").css({
+    //         "top": ((window_height-$(".header").height())/2)-50
+    //     });
+    // });
+
+    // var header_position = $('.header').position().top;
+
+        // $(window).scroll(function(){
+            // var header_position = $('.header').offset().top;
+            // var header_position = $('.header').position().top;
+            // if(header_position >= 10){
+                // alert(header_position);
+                // headerScrollDown();                
+            // }
+            // if(header_position < 10){
+            //     alert(header_position);
+            //     headerScrollUp();
+            // }
+            // if($(window).scrollTop() >= header_position){
+                // alert(header_position);
+                // headerScrollDown();
+            // }
+            // if ($(window).scrollTop() < header_position) {
+                // headerScrollUp();
+            // }
+            // if($(window).scrollTop() + 100 > $(document).height() - $(window).height() ){
+                // alert("at bottom");
+            // }
+        // });
+
+
+
+
+    });
+
+    function headerScrollDown() {
+        $('.header').removeClass('header_center');
+        // $('.header').animate({
+            // 'top': 10
+        // });
+        $('.header').addClass('header_top');
+
+    }
+
+    function headerScrollUp(){
+        $('.header').removeClass('header_top');
+        // $('.header').animate({
+            // 'top': '40%'
+        // });
+        $('.header').addClass('header_center');
+
+    }
+
+
+</script>
+
 </body>
 </html>

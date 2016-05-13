@@ -1,4 +1,6 @@
-<!DOCTYPE html class="no-js">
+
+<!-- <!DOCTYPE html class="no-js"> -->
+<!DOCTYPE html>
 
 <!--
 This is an HTML document. It contains information about how elements in the website
@@ -17,12 +19,12 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 <head>
     <!-- This tells the browser how to read the document. -->
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
 
     <!-- Tells the browser what the title of this page should be. -->
     <title>Resume</title>
 
-    <!-- Load the page styles. -->
-    <link href="css/style.css" rel="stylesheet">
 
     <!--
     jQuery is a common JavaScript library for reading and making changes to the
@@ -46,117 +48,59 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     Uncomment the <script> tag below when you're ready to add an interactive
     Google Map to your resume!
     -->
-    <!--
+    
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
-  -->
 
-    <script src="bootstrap/js/bootstrap.js" language="JavaScript"></script>
+
+    <script src="bootstrap/js/bootstrap.js" language="JavaScript" type="text/javascript"></script>
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
 
-    <script type="text/javascript" src="slick/slick.js" ></script>
-    <link href="slick/slick.css" rel="stylesheet" type="text/css" />
-    <link href="slick/slick-theme.css" rel="stylesheet" type="text/css" />
+    <!-- Load the page styles. -->
+    <link href="css/style.css" rel="stylesheet">
 
-    <meta name="viewport" content="width=device-width">
-</head>
-<body>
 
 
 
 <style>
 
+.container{
+    margin-bottom: 25px;
+}
 
+.header{
+    position: absolute;
+    background: #000;
+    border:2px solid #fff;
+    overflow: hidden;
+    z-index: 1000000;
+    width: 100%;
+    height: 120px;
 
-    .slider{
-        display: none;
-        position: absolute;
-        /*left: 0px;*/
-        /*top: 0px;*/
-        width: 90%;
-        height: 70%;
-        /*background: red;*/
-        left:5%;
-
-        top:15%;
-
-        border: 1px solid #fff;
-    }
-
-    .slick-slide{
-
-    }
-
+}
 </style>
 
-<!-- banner container -->
-<div class="container-fluid">
+</head>
+<body>
+
+
+
+<div class="container">
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="position:absolute; left:0px; top:0px; width:100%; height:100%;">
+        <div class="col-xs-12 header_window">
+    <!--header-->
 
-            <ul id="example-slick" class="slider">
-                <li rel="jKit[binding.viewport:selector=this" data-jkit="[show:onevent=viewport.true][hide:onevent=viewport.false]">>
+            <div id="header" class="header header_center">
 
-                    <!--WorkExperience-->
-                    <div id="workExperience" style="width: 100%; height:100%; background: #ffffff;">
-                        <h2>Work Experience</h2>
-                    </div>
+            </div>
 
-
-                </li>
-                <li rel="jKit[binding.viewport:selector=this" data-jkit="[show:onevent=viewport.true][hide:onevent=viewport.false]">>
-
-                    <!--projects-->
-                    <div id="projects" style="width: 100%; height:100%; background: #ffffff;">
-                        <h2>Projects</h2>
-                    </div>
-
-
-
-
-
-                </li>
-                <li rel="jKit[binding.viewport:selector=this" data-jkit="[show:onevent=viewport.true][hide:onevent=viewport.false]">>
-
-
-
-                    <!--education-->
-                    <div id="education" style="width: 100%; height:100%; background: #ffffff;">
-                        <h2>Education</h2>
-                    </div>
-
-
-
-
-
-
-                </li>
-                <li rel="jKit[binding.viewport:selector=this" data-jkit="[show:onevent=viewport.true][hide:onevent=viewport.false]">>
-
-
-
-                    <!--maps-->
-                    <div id="mapDiv">
-                        <h2>Where I've Lived and Worked</h2>
-                    </div>
-
-
-
-
-
-                </li>
-            </ul>
-            <!-- </div> -->
-
+    <!--/header-->
 
         </div>
     </div>
 </div>
-<!-- end of banner container -->
 
 
-
-
-<div id="main" style="position:absolute; left: 0px; top: 0px; width: 100%; height: 100%;">
+<div id="main">
 
     <!--
     Everything from here to the <script> tag below is the skeleton of your
@@ -164,36 +108,58 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     resume below. You can pretty easily figure out what each section will
     display by looking at the id or at what's written between the <h2> tags.
     -->
-    <!--header-->
+
+
+
     <div class="container">
-        <div class="row" id="header_container">
-            <div id="header" class="col-xs-12 center-content clear-fix text-center">
-
-
-
-
-
-
-
-            </div>
-        </div>
-    </div>
-    <div class="container" style="position: absolute; bottom: 15%;">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-                <span><a href="#" class="continue_tour">Click Me</a></span>
 
+                <div id="workExperience" style="width: 100%; height:100%; color: #000; background: #ffffff;">
+                    <h2>Work Experience</h2>
+                </div>
             </div>
         </div>
-
     </div>
 
-    <ul id="topContacts" class="flex-box"></ul>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+
+                <div id="projects" style="width: 100%; height:100%; background: #ffffff;">
+                    <h2>Projects</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                <div id="education" style="width: 100%; height:100%; background: #ffffff;">
+                    <h2>Education</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                <div id="mapDiv">
+                    <h2>Where I've Lived and Worked</h2>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
 
-    <div style="clear: both;"></div>
+
 
 
 
@@ -244,6 +210,7 @@ course.
     if(document.getElementsByClassName('flex-item').length === 0) {
         document.getElementById('topContacts').style.display = 'none';
     }
+
     if(document.getElementsByTagName('h1').length === 0) {
         document.getElementById('header').style.display = 'none';
     }
@@ -263,62 +230,51 @@ course.
         document.getElementById('mapDiv').style.display = 'none';
     }
 
+    $(document).ready(function(){
 
-    var window_height = $(window).height();
-    $("#header_container").css({
-        "height": window_height
-    });
-    $("#header").css({
-        "top": ((window_height-$("#header").height())/2)-50
-    });
-    $(window).resize(function(){
+        // get the height of the window
         var window_height = $(window).height();
-        $("#header_container").css({
-            "height": window_height
-        });
-        $("#header").css({
-            "top": ((window_height-$("#header").height())/2)-50
+        // alert(window_height);
+
+        // set header_window.height to the height of the window
+        $('.header_window').css({
+            'height': window_height
         });
 
+        // get the height of the header div
+        var header_height = $('.header').height();
+
+        // set the top position of the header when page loads
+        var header_window_position = (window_height - header_height)/2;
+        alert(header_window_position);
+
+        $('.header').css({
+            'top': header_window_position
+        });
+
+
+
+        $(document).scroll(function(){
+
+            // $(window).scrollTop();
+            if($('.header').offset().top >= 20){
+                alert($('.header').position().top);
+            }
+
+
+
+        });
 
 
 
     });
 
+    function makeHeaderFixed(){
 
-</script>
-
-
-<script language="javascript">
-    $(document).ready(function(){
+    }
 
 
-        $('#example-slick').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 2000,
-        });
-    });
-</script>
 
-<script language="javascript">
-    $(document).ready(function(){
-        $(".continue_tour").on("click", function(){
-            $(this).fadeOut();
-            $("#header").animate({
-
-                opacity: 0.0,
-                top: "0px",
-
-            }, 1000, function(){
-//                            alert("its gone");
-                $(".slider").fadeIn(1000);
-            });
-//                        $("#header_container").fadeOut();
-
-        })
-    });
 </script>
 
 

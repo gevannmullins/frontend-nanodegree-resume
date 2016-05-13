@@ -17,12 +17,11 @@ var bio = {
 
 
 // display contact information
-/*
-for(var items in bio.contacts) {
 
-    $("#topContacts").append(HTMLcontactGeneric.replace("%contact%", items).replace("%data%", bio.contacts[items]));
-}
-*/
+// for(var items in bio.contacts) {
+//     $("#topContacts").append(HTMLcontactGeneric.replace("%contact%", items).replace("%data%", bio.contacts[items]));
+// }
+
 
 // display my name
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -39,22 +38,19 @@ $("#header").append(formattedRole);
  var formattedMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
  $("#header").append(formattedMsg);
 
-$("#header_container").append(HTMLheaderArrow);
+// $("#header_container").append(HTMLheaderArrow);
 
 // bio image
- /*
-var formattedImg = HTMLbioPic.replace("%data%", bio.biopic);
-$("#header").append(formattedImg);
-  */
+// var formattedImg = HTMLbioPic.replace("%data%", bio.biopic);
+// $("#header").append(formattedImg);
+
 
 
 // display skills information
- /*
 $("#header").append(HTMLskillsStart);
 for(var skills in bio.skills) {
     $("#header").append(HTMLskills.replace("%data%", bio.skills[skills]));
 }
-  */
 
 
 
