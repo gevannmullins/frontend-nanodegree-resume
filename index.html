@@ -61,23 +61,6 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
 
 
-<style>
-
-.container{
-    margin-bottom: 25px;
-}
-
-.header{
-    position: absolute;
-    background: #000;
-    border:2px solid #fff;
-    overflow: hidden;
-    z-index: 1000000;
-    width: 100%;
-    height: 120px;
-
-}
-</style>
 
 </head>
 <body>
@@ -229,50 +212,6 @@ course.
     if(document.getElementById('map') === null) {
         document.getElementById('mapDiv').style.display = 'none';
     }
-
-    $(document).ready(function(){
-
-        // get the height of the window
-        var window_height = $(window).height();
-        // alert(window_height);
-
-        // set header_window.height to the height of the window
-        $('.header_window').css({
-            'height': window_height
-        });
-
-        // get the height of the header div
-        var header_height = $('.header').height();
-
-        // set the top position of the header when page loads
-        var header_window_position = (window_height - header_height)/2;
-        alert(header_window_position);
-
-        $('.header').css({
-            'top': header_window_position
-        });
-
-
-
-        $(document).scroll(function(){
-
-            // $(window).scrollTop();
-            if($('.header').offset().top >= 20){
-                alert($('.header').position().top);
-            }
-
-
-
-        });
-
-
-
-    });
-
-    function makeHeaderFixed(){
-
-    }
-
 
 
 </script>
